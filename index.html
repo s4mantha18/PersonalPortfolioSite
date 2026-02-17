@@ -4,190 +4,136 @@
     <meta charset="UTF-8" />
     <title>Chidinma James | Web Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap"
-      rel="stylesheet"
-    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
   </head>
   <body>
-    <!-- Navigation -->
-    <header>
-      <nav class="navbar">
-        <h2 class="logo">
-          <img src="img/logo.png" alt="Chidinma James Logo" />
-        </h2>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div>
-        <h1>
-          <span class="hello">Hello</span>, I'm <span>Chidinma James</span>
-        </h1>
-        <p>Frontend Developer | Problem Solver | Creative Thinker</p>
-        <a href="#projects" class="btn">View My Work</a>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Chidinma James Logo" />
       </div>
-      <div>
-        <img
-          src="img/Chidinma.png"
-          alt="Chidinma James"
-          aria-label="Chidinma James"
-          class="hero-img"
-        />
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li>
+          <button onclick="openModal()" class="btn-nav">Get In Touch</button>
+        </li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="badge">Frontend Developer</span>
+        <h1>
+          Hello, I'm <br />
+          <span class="gradient-text">Chidinma James</span>
+        </h1>
+        <p>
+          Problem Solver | Creative Thinker | Building digital experiences that
+          matter.
+        </p>
+        <a href="#projects" class="btn primary">View My Work</a>
+      </div>
+
+      <div class="hero-image-container">
+        <img src="img/Chidinma.png" alt="Chidinma James" class="profile-img" />
       </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="section">
-      <div class="block"></div>
-      <div class="text">
-        <h2>About Me</h2>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-card">
         <p>
           I am a passionate web developer with strong knowledge of HTML, CSS,
           and JavaScript. I enjoy building clean, responsive, and user-friendly
           websites. What started as curiosity about how websites work turned
-          into a passion for creating them. I love the moment when structure,
-          style, and interaction come together to create something seamless and
-          intuitive. I focus on writing clean, maintainable code and designing
-          interfaces that feel natural to users. For me, frontend development
-          isn’t just about making things look good, it’s about making them work
-          beautifully. Every project I take on is an opportunity to learn,
-          improve, and create something meaningful.
+          into a passion for creating them. <br /><br />
+          I focus on writing clean, maintainable code and designing interfaces
+          that feel natural to users. For me, frontend development isn’t just
+          about making things look good, it’s about making them work
+          beautifully.
         </p>
       </div>
-      <div class="block"></div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section light">
-      <h2>Skills</h2>
+    <section id="skills" class="section">
+      <h2 class="section-title">My Tech Stack</h2>
       <div class="skills-container">
-        <div class="skill">
+        <div class="skill-card">
           <img
             src="img/HTML5-Logo-PNG-Symbol-for-Web-Development-Transparent.png"
-            alt=""
+            alt="HTML5"
           />
+          <h3>HTML5</h3>
         </div>
-        <div class="skill">
+        <div class="skill-card">
           <img
             src="img/CSS-Logo-PNG-Symbol-for-Web-Development-Transparent.png"
-            alt=""
+            alt="CSS3"
           />
+          <h3>CSS3</h3>
         </div>
-        <div class="skill">
+        <div class="skill-card">
           <img
             src="img/JavaScript-Logo-PNG-Symbol-for-Web-Development-Transparent.png"
-            alt=""
+            alt="JavaScript"
           />
+          <h3>JavaScript</h3>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
+    <section id="projects" class="section bg-offset">
+      <h2 class="section-title">Featured Projects</h2>
       <div class="projects-container">
-        <div class="project-item">
-          <a href="https://s4mantha18.github.io/cardGame/">
-            <img
-              src="img/cardGame.png"
-              alt="Card Game Screenshot"
-              loading="lazy"
-            />
-            <div>
-              <div class="project-info">
-                <strong>Card Game </strong>
-                <p>A browser-based card game built using JavaScript.</p>
-              </div>
-              <div class="technologies">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
+        <div class="project-card">
+          <div class="card-image">
+            <img src="img/cardGame.png" alt="Card Game Screenshot" />
+          </div>
+          <div class="card-content">
+            <h3>Card Shuffler</h3>
+            <p>A browser-based card shuffler built using JavaScript logic.</p>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>JS</span>
             </div>
-          </a>
+            <a href="https://s4mantha18.github.io/cardGame/" class="link"
+              >Play Game <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
         </div>
-        <div class="project-item">
-          <a href="">
-            <img
-              src="img/portfolio.png"
-              alt="portolio screenshot"
-              loading="lazy"
-            />
-            <div>
-              <div class="project-info">
-                <strong>Portfolio </strong>
-                <p>
-                  A responsive portfolio website built using HTML, CSS, and
-                  JavaScript.
-                </p>
-              </div>
-              <div class="technologies">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-          </a>
+
+        <div class="project-card">
+          <div class="card-image">
+            <img src="img/portfolio.png" alt="Portfolio Screenshot" />
+          </div>
+          <div class="card-content">
+            <h3>My Portfolio</h3>
+            <p>
+              A responsive portfolio website built using HTML, CSS, and
+              JavaScript.
+            </p>
+            <div class="tags"><span>Design</span><span>Responsive</span></div>
+            <a href="#" class="link"
+              >View Code <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- Contact -->
-    <section id="contact">
-      <div class="contact-container">
-        <h2>Contact Me</h2>
-        <p class="contact-text">
-          Have a project in mind or just want to say hello? Send me a message!
-        </p>
-
-        <form class="contact-form" id="contactForm">
-          <div class="input-group">
-            <input type="text" name="name" placeholder="Your Name" required />
-          </div>
-
-          <div class="input-group">
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-          </div>
-
-          <div class="input-group">
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Your Message"
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit">Send Message</button>
-        </form>
       </div>
     </section>
 
@@ -199,6 +145,24 @@
         <i class="fa-brands fa-github"></i>
       </div>
     </footer>
+
+    <div id="contactModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="contact-box">
+          <h2>Get In Touch</h2>
+          <p>Have a project in mind? Send me a message!</p>
+          <form id="popupForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit" class="btn primary" style="width: 100%">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <script src="index.js"></script>
   </body>
